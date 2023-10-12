@@ -14,6 +14,10 @@ let pokemonList = [
     height: 1,
     type: ['Poison', 'Bug'],
     weight: 29.5
+    },
+    {name: 'Dewgong',
+     height: 1.7,
+     type: ['Ice', 'Water'],
+     weight: 120
     }
-
 ]
