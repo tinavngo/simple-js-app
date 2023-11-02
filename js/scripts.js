@@ -1,3 +1,4 @@
+let pokemonRepository = (function(){
 let pokemonList = [
     { name: 'Ninetales', height: 1.1, type: ['Fire'], weight: 19.9 },
 
@@ -9,6 +10,15 @@ let pokemonList = [
 
     { name: 'Dragonair', height: 4, type: ['Dragon'], weight: 16.5 }
 ];
+return {
+    getAll: function() {
+        return pokemonList;
+    },
+    add: function(pokemon) {
+        pokemonList.push(pokemon);
+    }
+}
+})();
 
 pokemonList.forEach(function(pokemon){
     if (pokemon.height > 1) {
