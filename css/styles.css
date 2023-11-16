@@ -12,3 +12,30 @@
     transition: background-color 0.3s ease;
     margin: 5px;
   }
+
+  /*modal styling*/
+  #modal-container{
+    display:none;
+  }
+
+  #modal-continer.is-visible{
+    position: fixed;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+      /* to show it above other content */
+  z-index: 999; 
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto; 
+
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+  }
+  
