@@ -56,9 +56,9 @@ let dialogPromiseReject;
     }
   });
 
-  document.querySelector('#show-modal').addEventListener('click', () => {
-    showModal({ name: 'Modal title', height: 'This is the modal content!' });
-  });
+//  document.querySelector('#show-modal').addEventListener('click', () => {
+  //  showModal({ name: 'Modal title', height: 'This is the modal content!' });
+ // });
 
   //confirm or not confirm dialog
   document.querySelector('#show-dialog').addEventListener('click', () => {
