@@ -56,10 +56,6 @@ let dialogPromiseReject;
     }
   });
 
-//  document.querySelector('#show-modal').addEventListener('click', () => {
-  //  showModal({ name: 'Modal title', height: 'This is the modal content!' });
- // });
-
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
