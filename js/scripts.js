@@ -60,12 +60,6 @@ let dialogPromiseReject;
   //  showModal({ name: 'Modal title', height: 'This is the modal content!' });
  // });
 
-  //confirm or not confirm dialog
-  document.querySelector('#show-dialog').addEventListener('click', () => {
-    showDialog('Confirm action', 'Are you sure you want to do this?')
-      .then(() => alert('confirmed!'))
-      .catch(() => alert('not confirmed'));
-  });
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
