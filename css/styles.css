@@ -52,12 +52,21 @@
   .modal {
     margin: auto;
     display: inline-block;
+    z-index: 10000;
     box-sizing: border-box;
-    background: #fff;
+    background: #bddcff;
     padding: 15px;
     width: 100%;
     max-width: 700px;
     text-align: left;
+    border: solid;
+  }
+
+  .modal p {
+margin-bottom: 0;
+text-align: center;
+font-weight: 900;
+font-size: 25px;
   }
   
   .modal-close {
@@ -67,6 +76,7 @@
     background: none;
     color: #777;
     text-decoration: underline;
+    cursor: pointer;
   }
   
   .modal h1 {
@@ -79,7 +89,10 @@
   
   #image-container {
     position: absolute;
-    margin: auto;
+    margin-left: 50%;
     height: 50px;
     width: 50px;
+    align-self: center;
 }
+
+
