@@ -36,6 +36,7 @@ let dialogPromiseReject;
   function hideModal() {
     let modal = document.querySelector(".modal");
     modal.remove();
+    modalContainer.remove();
 
     if (dialogPromiseReject) {
       dialogPromiseReject();
