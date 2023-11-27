@@ -35,8 +35,8 @@ let dialogPromiseReject;
 
   function hideModal() {
     let modal = document.querySelector(".modal");
+    modalContainer.classList.remove("is-visible");
     modal.remove();
-    modalContainer.remove();
 
     if (dialogPromiseReject) {
       dialogPromiseReject();
