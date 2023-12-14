@@ -33,33 +33,6 @@ let pokemonRepository = (function () {
     });
   }
 
-/*let dialogPromiseReject;
-
-  function hideModal() {
-    let modal = document.querySelector(".modal");
-    modalContainer.classList.remove("is-visible");
-    modal.remove();
-
-    if (dialogPromiseReject) {
-      dialogPromiseReject();
-      dialogPromiseReject = null;
-    }
-  }
-
-//user exits modal with esc
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modalContainer.classList.contains("is-visible")) {
-      hideModal();
-    }
-  });
-//user exits modal by clicking
-  modalContainer.addEventListener("click", (e) => {
-    if (e.target === modalContainer) {
-      hideModal();
-    }
-  });
-  */
-
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
