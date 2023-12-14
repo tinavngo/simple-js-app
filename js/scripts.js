@@ -2,13 +2,12 @@ let pokemonRepository = (function () {
   let repository = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
-  let modalContainer = document.querySelector('#modal-container');
-
   //Modal
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
     let modalHeader = $(".modal-header");
+    //modalHeader.empty();
     modalTitle.empty();
     modalBody.empty();
 
@@ -23,6 +22,8 @@ let pokemonRepository = (function () {
     //img for modal here
     let myImage = document.createElement('img');
     myImage.src = pokemon.imageUrl;
+
+    //element for abilities in modal content
     modalBody.append(myImage);
     modalBody.append(closeButtonElement);
     modalBody.append(titleElement);
@@ -65,13 +66,13 @@ let pokemonRepository = (function () {
     let listPokemon = document.createElement('li');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
-    addListItem.classList.add("list-group-item");
-    listItem.classList.add("list-group-item");
-    button.setAttribute("data-toggle", "modal");
-    button.setAttribute("data-target", "#exampleModal");
+    button.classList.add('btn', 'btn-primary'); // Bootstrap button classes
+    listPokemon.classList.add("list-group-item"); //boostrap button list
+    button.setAttribute("data-toggle", "modal"); //bootstrap button attr
+    button.setAttribute("data-target", "#exampleModal"); //bootstrap button attr
     button.classList.add("btn", "btn-outline-info");
-    listItem.append(button);
-    element.append(listItem);
+    listPokemon.append(button);
+    pokemonList.append(listPokemon);
     button.addEventListener('click', () => showDetails(pokemon));
   }
 
