@@ -26,7 +26,7 @@ let pokemonRepository = (function () {
     //element for abilities in modal content
     modalBody.append(myImage);
     modalBody.append(closeButtonElement);
-    modalBody.append(titleElement);
+    modalTitle.append(titleElement);
     modalBody.append(contentElement);
     $("#exampleModal").click(function(){
       $(button).toggle("modal");
@@ -36,8 +36,11 @@ let pokemonRepository = (function () {
 
   function addListItem(pokemon) {
     let pokemonList = document.querySelector('.pokemon-list');
+    //creating li element inside the ul
     let listPokemon = document.createElement('li');
+    //creating button element inside the li
     let button = document.createElement('button');
+
     button.innerText = pokemon.name;
     button.classList.add('btn', 'btn-primary'); // Bootstrap button classes
     listPokemon.classList.add("list-group-item"); //boostrap button list
