@@ -13,7 +13,7 @@ let pokemonRepository = (function () {
 
     //creating element for modal name
     let titleElement = document.createElement('h1');
-    titleElement.innerText = 'Pokemon name' + ': ' + pokemon.name;
+    titleElement.innerText = pokemon.name;
 
     //creating element for modal height
     let contentElement = document.createElement('p');
@@ -25,7 +25,7 @@ let pokemonRepository = (function () {
 
     //element for abilities in modal content
     modalBody.append(myImage);
-    modalBody.append(closeButtonElement);
+    //modalBody.append(closeButtonElement);
     modalTitle.append(titleElement);
     modalBody.append(contentElement);
     $("#exampleModal").click(function(){
