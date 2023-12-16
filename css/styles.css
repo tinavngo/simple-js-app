@@ -4,19 +4,34 @@
 
 /*button styling*/
 .button-class {
-    display: inline-block;
-    padding: 10px 20px;
+    display: flex;
+    padding: 20px;
     font-size: 16px;
     background-color: #3498db;
-    color: #000000; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    text-transform: uppercase;
     transition: background-color 0.3s ease;
-    margin-left: 35px;
 }
+
+.btn-primary {
+  width: 150px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.692);
+}
+
+/*Modal Styling*/
+.modal-header {
+text-decoration: overline;
+transition: tranform 0.3 ease-in;
+font-size: medium;
+color: #3498db;
+}
+.modal-body {
+  margin-left: 32%;
+}
+/*General styling*/
   h1{
     text-align: center;
   }
@@ -26,7 +41,6 @@
     text-align: center;
   }
 
-  
   #image-container {
     position: relative;
     margin-left: 50%;
