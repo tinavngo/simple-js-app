@@ -2,11 +2,30 @@ let pokemonRepository = (function () {
   let repository = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
 
+ //Search Bar
+
+ const searchBar = document.getElementById('searchBar');
+
+ searchBar.addEventListener('keyup', (e) => {
+   const searchString = e.target.value.toLowerCase();
+
+   const filteredPokemon = repository.filter((pokemon) => {
+     const nameIncludes = pokemon.name.toLowerCase().includes(searchString);
+     const typesInclude =
+       pokemon.types &&
+       Array.isArray(pokemon.types) &&
+       pokemon.types.some((type) => type.toLowerCase().includes(searchString));
+
+     return nameIncludes || typesInclude;
+   });
+   console.log(filteredPokemon);
+ });
+
   //Modal
   function showModal(pokemon) {
     let modalBody = $(".modal-body");
     let modalTitle = $(".modal-title");
-    let modalHeader = $(".modal-header");
+   // let modalHeader = $(".modal-header");
     //modalHeader.empty();
     modalTitle.empty();
     modalBody.empty();
@@ -111,11 +130,14 @@ let pokemonRepository = (function () {
     showDetails: showDetails,
     showModal: showModal,
   };
+
 })();
+
 
 pokemonRepository.loadList().then(function() {
   // Now the data is loaded
   pokemonRepository.getAll().forEach(function(pokemon) {
       pokemonRepository.addListItem(pokemon);
   }); 
-})
+});
+
