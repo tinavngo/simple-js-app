@@ -18,7 +18,14 @@ let pokemonRepository = (function () {
 
      return nameIncludes || typesInclude;
    });
-   console.log(filteredPokemon);
+// Clear the current list
+const pokemonList = document.querySelector(".pokemon-list");
+pokemonList.innerHTML = "";
+
+// Re-render the filtered list
+filteredPokemon.forEach((pokemon) => {
+pokemonRepository.addListItem(pokemon);
+});
  });
 
   //Modal
